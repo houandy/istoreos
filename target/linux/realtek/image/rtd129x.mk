@@ -86,6 +86,14 @@ define Device/pl-sgr1
 endef
 TARGET_DEVICES += pl-sgr1
 
+define Device/yda
+	$(call Device/ars2)
+	DEVICE_TITLE := YDA
+	DEVICE_DTS := yda
+	UBOOT_DTS := yda
+endef
+TARGET_DEVICES += yda
+
 include rescue.mk
 
 endif
